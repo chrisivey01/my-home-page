@@ -1,0 +1,66 @@
+mat-card{
+  left:8%;
+  margin-top:5%;
+  width:80%;
+}
+
+#nav{
+  color:white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#skillContainer{
+  margin-left: 25%;
+}
+
+#rightContainer{
+  left: 20px;
+}
+
+#calculateWeight{
+  background: white;
+}
+/*#skillset{
+  margin-left:25%;
+}
+
+#frameEnvironments{
+  margin-left: 45%;
+}*/
+
+#weightForm{
+  border: solid;
+  width: 20%;
+  padding:10px;
+}
+.first{
+  display:list-item;
+  list-style-type: circle;
+}
+
+td{
+  padding:10px;
+  border:solid;
+  color:black;
+}
+
+li{
+  display:inline-table;
+  margin-left:20px;
+  margin-top:40px;
+
+}
+
+li a{
+  display:block;
+  padding:5px 20px;
+}
+
+button{
+  margin: 50px;
+  left: 12%;
+  top: 30px;
+  background-color:#24292e;
+}
