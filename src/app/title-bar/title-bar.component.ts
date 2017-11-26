@@ -67,6 +67,12 @@ export class TitleBarComponent implements OnInit {
 
   calculateWeight() {
 
+    this.fortyFives = 0;
+    this.twentyFives = 0;
+    this.tens = 0;
+    this.fives = 0;
+    this.twoPointFives = 0;
+
     let weight = this.calcForm.controls.weightCalculate.value;
 
     weight -= 45;
