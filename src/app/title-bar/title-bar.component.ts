@@ -94,7 +94,7 @@ export class TitleBarComponent implements OnInit {
         weight = weight - 5;
         this.twoPointFives += 2;
       }
-    } this.calcForm.updateValueAndValidity();
+    }
   }
 
   ngOnInit() {

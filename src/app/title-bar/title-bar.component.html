@@ -1,11 +1,11 @@
 <mat-toolbar id="nav">
-  <p id="clock">{{ myDate | amDateFormat: 'ddd Do HH:mm:ss' }}</p>
-
-  <button id="home" mat-button (click)="swapContentHome()"> Home</button>
-  <button id="bio" mat-button (click)="swapContentBio()"> Bio</button>
-  <button id="resume" mat-button (click)="swapContentResume()"> Resume</button>
-  <button id="contact" mat-button (click)="swapContentContact()"> Contact</button>
-
+  <div id="clock">{{ myDate | amDateFormat: 'ddd Do HH:mm:ss' }}</div>
+  <div class=buttonContainer>
+    <button id="home" mat-button (click)="swapContentHome()"> Home</button>
+    <button id="bio" mat-button (click)="swapContentBio()"> Bio</button>
+    <button id="resume" mat-button (click)="swapContentResume()"> Resume</button>
+    <button id="contact" mat-button (click)="swapContentContact()"> Contact</button>
+  </div>
 </mat-toolbar>
 
 <mat-card *ngIf="home">
@@ -18,7 +18,7 @@
 
 <mat-card *ngIf="resume">
   <table id="skillContainer">
-    <td id ="leftContainer">
+    <td id="leftContainer">
       <table id="skillset">
         <th id="skills" colspan="3" style="text-align: center; text-decoration: underline;"> Current up-to-date
           skillset
@@ -47,7 +47,7 @@
         </tr>
       </table>
     </td>
-  <div></div>
+    <div></div>
     <td id="rightContainer">
       <table id="frameEnvironments">
         <th id="frameworks" colspan="3" style="text-align: center; text-decoration:underline;">
@@ -86,11 +86,12 @@
   </ul>
 </mat-card>
 
-<mat-card *ngIf="contact">
-  <form [formGroup]="calcForm" (ngSubmit)="calculateWeight()">
-    <input formControlName="weightCalculate" placeholder="Target Weight">
-    <button id="calculateWeight">Calculate</button>
-  </form>
+<div class="calculatorGym">
+  <mat-card *ngIf="contact">
+    <form [formGroup]="calcForm" (ngSubmit)="calculateWeight()">
+      <input formControlName="weightCalculate" placeholder="Target Weight">
+      <button id="calculateWeight">Calculate</button>
+    </form>
     <table class=plateNumber>
       <tr>
         <td>45lb plates</td>
@@ -113,4 +114,5 @@
         <td>{{twoPointFives}}</td>
       </tr>
     </table>
-</mat-card>
+  </mat-card>
+</div>

@@ -1,14 +1,16 @@
 mat-card{
   left:8%;
-  margin-top:5%;
+  margin-top:10%;
   width:80%;
 }
 
+.calculatorGym{
+  top: 20%;
+}
 #nav{
   color:white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: inline-table;
+  margin:auto;
 }
 
 #skillContainer{
@@ -22,13 +24,6 @@ mat-card{
 #calculateWeight{
   background: white;
 }
-/*#skillset{
-  margin-left:25%;
-}
-
-#frameEnvironments{
-  margin-left: 45%;
-}*/
 
 #weightForm{
   border: solid;
@@ -59,8 +54,19 @@ li a{
 }
 
 button{
-  margin: 50px;
-  left: 12%;
-  top: 30px;
+  top: 45%;
   background-color:#24292e;
+}
+
+.buttonContainer{
+  text-align:center;
+
+}
+
+@media only screen and (max-width: 320px){
+
+  button{
+    top: 45%;
+    background-color:#24292e;
+  }
 }
