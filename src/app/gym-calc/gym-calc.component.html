@@ -1,0 +1,30 @@
+<mat-dialog-content class="calc">
+  <form [formGroup]="calcForm" (ngSubmit)="calculateWeight()">
+    <input formControlName="weightCalculate" placeholder="Target Weight">
+    <button id="calculateWeight">Calculate</button>
+  </form>
+  <table class=plateNumber>
+    <tr>
+      <td>45lb plates</td>
+      <td>{{fortyFives}}</td>
+    </tr>
+    <tr>
+      <td>25lb plates</td>
+      <td>{{twentyFives}}</td>
+    </tr>
+    <tr>
+      <td>10lb plates</td>
+      <td>{{tens}}</td>
+    </tr>
+    <tr>
+      <td>5lb plates</td>
+      <td>{{fives}}</td>
+    </tr>
+    <tr>
+      <td>2.5lb plates</td>
+      <td>{{twoPointFives}}</td>
+    </tr>
+  </table>
+
+  <button mat-raised-button matDialogClose>Close</button>
+</mat-dialog-content>

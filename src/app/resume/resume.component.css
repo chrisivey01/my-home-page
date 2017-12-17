@@ -1,0 +1,16 @@
+.skillContainer{
+  margin-left: 25%;
+}
+
+#rightContainer{
+  left: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .skillContainer {
+    display: block;
+    margin-left: 0%;
+  }
+}
