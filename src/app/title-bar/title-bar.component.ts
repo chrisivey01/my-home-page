@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import $ from 'jquery';
-
-
 
 @Component({
   selector: 'app-title-bar',
@@ -23,7 +20,12 @@ export class TitleBarComponent implements OnInit {
   time() {
     setInterval(() => {
       this.myDate = new Date();
-     // console.log(this.myDate); // just testing if it is working
+      // console.log(this.myDate); // just testing if it is working
     }, 1000);
   }
 }
+(function() {
+
+  console.log('self invoking function');
+}());
+

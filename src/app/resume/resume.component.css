@@ -1,9 +1,13 @@
+.resume{
+
+}
+
 .skillContainer{
-  margin-left: 25%;
+  justify-content: center;
 }
 
 #rightContainer{
-  left: 20px;
+/*  left: 20px;*/
 }
 
 

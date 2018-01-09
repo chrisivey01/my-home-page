@@ -1,11 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { TitleBarComponent } from './title-bar/title-bar.component';
-
-import {MatButtonModule, MatCardModule, MatCheckboxModule, MatTableModule,
-  MatSelectModule, MatToolbarModule, MatDialogModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatTableModule,
+  MatSelectModule,
+  MatToolbarModule,
+  MatRadioModule,
+  MatDialogModule} from '@angular/material';
 import {MomentModule} from 'angular2-moment';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +20,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { BioComponent } from './bio/bio.component';
 import { HomeComponent } from './home/home.component';
 import { GymCalcComponent } from './gym-calc/gym-calc.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: 'resume',
@@ -26,6 +32,10 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: '',
@@ -41,7 +51,8 @@ const appRoutes: Routes = [
     ResumeComponent,
     BioComponent,
     HomeComponent,
-    GymCalcComponent
+    GymCalcComponent,
+    ContactComponent
   ],
   entryComponents: [GymCalcComponent],
   imports: [
@@ -55,6 +66,7 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatToolbarModule,
     MatDialogModule,
+    MatRadioModule,
     MomentModule,
     BrowserAnimationsModule,
     HttpClientModule,

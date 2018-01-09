@@ -1,5 +1,52 @@
 <mat-card>
-  another test
 
-  <button> </button>
+  <div class="container">
+
+    <div class="math">
+      <table>
+        <tr>
+          <td>
+            <input type="radio" name="math" id="add" (click)="addPicker()" checked>Add
+          </td>
+          <td>
+            <input type="radio" name="math" id="subtract" (click)="minusPicker()">Subtract
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="math" id="multiply" (click)="multiplyPicker()">Multiply
+          </td>
+          <td>
+            <input type="radio" name="math" id="divide" (click)="dividePicker()">Divide
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="calculator">
+      <table>
+        <tr>
+        <td>
+          <input id="test1" type="text" placeholder="Enter a number..">
+        </td>
+          <td>
+            <div id ="addSign" > + </div>
+            <div id ="minusSign" style = "display:none"> - </div>
+            <div id ="multiplySign" style = "display:none"> * </div>
+            <div id ="divideSign" style = "display:none"> / </div>
+          </td>
+        <td>
+          <input id="test2" type="text" placeholder="Enter a number..">
+        </td>
+        <td>
+          <label id="answer">{{answer}}</label>
+        </td>
+        </tr>
+        <tr>
+          <button (click)="picker()"> Calculate</button>
+        </tr>
+      </table>
+    </div>
+
+  </div>
 </mat-card>

@@ -1,10 +1,12 @@
 <mat-toolbar id="nav">
   <div id="clock">{{ myDate | amDateFormat: 'ddd Do HH:mm:ss' }}</div>
+  <br>
+  <br>
   <div class=buttonContainer>
-    <button id="home" mat-button routerLink="/home"> Home</button>
-    <button id="bio" mat-button routerLink="/bio"> Bio</button>
-    <button id="resume" mat-button routerLink="/resume"> Resume</button>
-    <button id="contact" mat-button routerLink="/  "> Contact</button>
+    <button id="home" mat-button style="flex-grow: 4" routerLink="/home"> Home</button>
+    <button id="bio" mat-button style="flex-grow: 4" routerLink="/bio"> Bio</button>
+    <button id="resume" mat-button style="flex-grow: 4" routerLink="/resume"> Resume</button>
+    <button id="contact" mat-button style="flex-grow: 4" routerLink="/contact"> Contact</button>
   </div>
 </mat-toolbar>
 

@@ -10,18 +10,20 @@ import {GymCalcComponent} from '../gym-calc/gym-calc.component';
 export class HomeComponent implements OnInit {
   dialogRef: MatDialogRef<GymCalcComponent>;
 
+
   constructor( public dialog: MatDialog) { }
 
 
   openDialog() {
-    this.dialogRef = this.dialog.open(GymCalcComponent, {
-      height: '225px',
-      width: '200px'
-    });
+    if (this.dialogRef == null) {
+      this.dialogRef = this.dialog.open(GymCalcComponent, {
+        height: '225px',
+        width: '200px'
+      });
 
-    this.dialogRef.updatePosition({top: '8%' , left: '30%'});
+      this.dialogRef.updatePosition({top: '8%', left: '30%'});
+    }
   }
-
 
   ngOnInit() {
   }

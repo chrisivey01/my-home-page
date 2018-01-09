@@ -1,6 +1,7 @@
 ///<reference path="../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
+import {MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-gym-calc',
@@ -15,11 +16,15 @@ export class GymCalcComponent implements OnInit {
   twoPointFives = 0;
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(public dialogRef: MatDialogRef<GymCalcComponent>, private fb: FormBuilder) {
   }
   calcForm = this.fb.group({
     weightCalculate: ['', Validators.required]
   });
+
+  closeCalc(): void {
+    this.dialogRef.close();
+  }
 
   calculateWeight() {
 
@@ -49,6 +54,8 @@ export class GymCalcComponent implements OnInit {
       } else if (weight >= 5) {
         weight = weight - 5;
         this.twoPointFives += 2;
+      } else if (weight < 5){
+        return;
       }
     }
   }
